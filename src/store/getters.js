@@ -1,6 +1,9 @@
 let getters = {
     isOpen: state => {
-        return state.drawerOpen
+        return state.drawer.open
+    },
+    component: state => {
+        return state.component
     },
 }
 export default getters

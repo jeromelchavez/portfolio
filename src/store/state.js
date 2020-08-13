@@ -1,4 +1,7 @@
 let state = {
-    drawerOpen: false
+    drawer: {
+        open: false
+    },
+    component: "Home"
 }
 export default state
