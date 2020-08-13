@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import VueRouter from 'vue-router'
 import App from './App.vue'
 import Home from "./components/Home";
 import Projects from "./components/Projects";
@@ -16,5 +17,5 @@ new Vue({
   vuetify,
   render: h => h(App),
     store,
-  routes
+  routes: new VueRouter(routes)
 }).$mount('#app')
