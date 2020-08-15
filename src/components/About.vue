@@ -1,13 +1,7 @@
 <template>
   <v-main>
-    <v-container
-        class="fill-height"
-        fluid
-    >
-      <v-row
-          align="center"
-          justify="center"
-      >
+    <v-container class="fill-height" fluid>
+      <v-row align="center" justify="center">
         To be completed
       </v-row>
     </v-container>
@@ -16,7 +10,7 @@
 
 <script>
 export default {
-  name: "Home"
+  name: "About"
 }
 </script>
 

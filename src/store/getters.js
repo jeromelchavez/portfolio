@@ -5,5 +5,8 @@ let getters = {
     component: state => {
         return state.component
     },
+    dialog: state => {
+        return state.dialog
+    },
 }
 export default getters
