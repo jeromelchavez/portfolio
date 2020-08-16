@@ -6,6 +6,5 @@ let state = {
     show: false,
     project_key: null,
   },
-  component: "HomeCom",
 };
 export default state;

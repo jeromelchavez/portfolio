@@ -1,7 +1,7 @@
 <template>
   <v-navigation-drawer :value="isOpen" app>
     <v-list dense>
-      <v-list-item link v-on:click="changeComponent('HomeCom')">
+      <v-list-item link :to="{name:'home'}">
         <v-list-item-action>
           <v-icon>mdi-home</v-icon>
         </v-list-item-action>
@@ -9,7 +9,7 @@
           <v-list-item-title>Home</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
-      <v-list-item link v-on:click="changeComponent('ProjectsCom')">
+      <v-list-item link :to="{name:'projects'}">
         <v-list-item-action>
           <v-icon>mdi-hard-hat</v-icon>
         </v-list-item-action>
@@ -17,7 +17,7 @@
           <v-list-item-title>Projects</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
-      <v-list-item link v-on:click="changeComponent('ResumeCom')">
+      <v-list-item link :to="{name:'resume'}">
         <v-list-item-action>
           <v-icon>mdi-book-account</v-icon>
         </v-list-item-action>
@@ -25,7 +25,7 @@
           <v-list-item-title>Resume</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
-      <v-list-item link v-on:click="changeComponent('AboutCom')">
+      <v-list-item link :to="{name:'about'}">
         <v-list-item-action>
           <v-icon>mdi-information</v-icon>
         </v-list-item-action>
@@ -42,11 +42,6 @@ import { mapGetters } from "vuex";
 
 export default {
   name: "NavigationDrawer",
-  methods: {
-    changeComponent(component) {
-      this.$store.dispatch("LOAD_BODY", component);
-    }
-  },
   computed: {
     ...mapGetters(["isOpen"])
   }

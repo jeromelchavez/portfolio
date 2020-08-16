@@ -2,21 +2,21 @@
   <v-container class="fill-height" fluid>
     <v-row class="fill-height overflow-auto">
       <v-col v-for="(project, index) in projects" :key="index" :lg="4" :md="6">
-        <v-card class="card fill-height">
-          <v-carousel hide-delimiters height="400">
-            <v-carousel-item v-for="(image, i) in project.images" @click.stop="showModal(index)" :key="i" datasrc="" :src="image"></v-carousel-item>
-          </v-carousel>
-          <v-card-title>{{ project.name }}</v-card-title>
-          <v-card-text>
-            <div class="my-4 subtitle-1">{{ project.description }}</div>
-          </v-card-text>
-          <v-divider class="mx-4"></v-divider>
-          <v-card-text>
-            <v-chip-group active-class="deep-purple accent-4 white--text" column>
-              <v-chip dark v-for="(tech, i) in project.tech_stack" :key="i">{{ tech }}</v-chip>
-            </v-chip-group>
-          </v-card-text>
-        </v-card>
+        <v-hover v-slot:default="{ hover }">
+          <v-card class="card fill-height" :elevation="hover ? 16 : 5">
+            <v-carousel hide-delimiters height="400">
+              <v-carousel-item v-for="(image, i) in project.images" @click.stop="showModal(index)" :key="i" datasrc="" :src="image"></v-carousel-item>
+            </v-carousel>
+            <v-card-title>{{ project.name }}</v-card-title>
+            <v-card-text>
+              <div class="my-4 subtitle-1">{{ project.description }}</div>
+            </v-card-text>
+            <v-divider class="mx-4"></v-divider>
+            <v-card-text>
+                <v-chip v-for="(tech, i) in project.tech_stack" :key="i">{{ tech }}</v-chip>
+            </v-card-text>
+          </v-card>
+        </v-hover>
       </v-col>
     </v-row>
   <Dialog></Dialog>
@@ -167,7 +167,7 @@ export default {
   },
   methods:{
     showModal(project_key){
-      this.$store.dispatch("SHOW_MODAL", project_key);
+      this.$store.dispatch("SHOW_MODAL",true, project_key);
     }
   },
   computed: {
