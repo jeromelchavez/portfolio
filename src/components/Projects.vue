@@ -1,6 +1,6 @@
 <template>
   <v-container class="fill-height" fluid>
-    <v-row class="fill-height overflow-auto">
+    <v-row class="fill-height overflow-auto" >
       <v-col v-for="(project, index) in projects" :key="index" :lg="4" :md="6">
         <v-hover v-slot:default="{ hover }">
           <v-card class="card fill-height" :elevation="hover ? 16 : 5">
@@ -35,25 +35,27 @@ export default {
     return {
       projects: [
         {
-          name: "Registrar",
-          description: "Registrar",
-          hidden: true,
+          name: "School Management System",
+          description: "An ERP system consists of 3 main modules, Registrar front-end, Academic management, and Back office.",
+          hidden: false,
           tech_stack: ["PHP", "MySQL/MariaDB", "Bootstrap"],
           images: [
-            require("../assets/HMS/Dashboard.jpg"),
-            require("../assets/HMS/Folio.jpg"),
-            require("../assets/HMS/GuestDatabase.jpg")
-          ]
-        },
-        {
-          name: "Cashier",
-          description: "Registrar",
-          hidden: true,
-          tech_stack: ["PHP", "MySQL/MariaDB", "Bootstrap"],
-          images: [
-            require("../assets/HMS/Dashboard.jpg"),
-            require("../assets/HMS/Folio.jpg"),
-            require("../assets/HMS/GuestDatabase.jpg")
+            require("../assets/eCampus/RegistrarFrontEndHome.png"),
+            require("../assets/eCampus/ApplicantInformation.png"),
+            require("../assets/eCampus/Assessment.png"),
+            require("../assets/eCampus/BasicEducationSubject.png"),
+            require("../assets/eCampus/CourseCurriculum.png"),
+            require("../assets/eCampus/Department.png"),
+            require("../assets/eCampus/EnrollmentPeriodSchedule.png"),
+            require("../assets/eCampus/ManageSubject.png"),
+            require("../assets/eCampus/ManualSectioning.png"),
+            require("../assets/eCampus/ManualSectioningEdit.png"),
+            require("../assets/eCampus/NewSection.png"),
+            require("../assets/eCampus/SHSsubjects.png"),
+            require("../assets/eCampus/SHStrack.png"),
+            require("../assets/eCampus/StudentInformation.png"),
+            require("../assets/eCampus/StudentList.png"),
+            require("../assets/eCampus/SubjectSchedule.png")
           ]
         },
         {
@@ -62,9 +64,14 @@ export default {
           hidden: true,
           tech_stack: ["PHP", "MySQL/MariaDB", "Bootstrap"],
           images: [
-            require("../assets/HMS/Dashboard.jpg"),
-            require("../assets/HMS/Folio.jpg"),
-            require("../assets/HMS/GuestDatabase.jpg")
+            require("../assets/HRIS/Home.png"),
+            require("../assets/HRIS/201File.png"),
+            require("../assets/HRIS/CalendarHolidays.png"),
+            require("../assets/HRIS/InterviewResults.png"),
+            require("../assets/HRIS/MassPunch.png"),
+            require("../assets/HRIS/PayStubList.png"),
+            require("../assets/HRIS/RecuringHolidays.png"),
+            require("../assets/HRIS/TimeKeeping.png")
           ]
         },
         {
@@ -73,9 +80,12 @@ export default {
           hidden: true,
           tech_stack: ["PHP", "MySQL/MariaDB", "Bootstrap"],
           images: [
-            require("../assets/HMS/Dashboard.jpg"),
-            require("../assets/HMS/Folio.jpg"),
-            require("../assets/HMS/GuestDatabase.jpg")
+            require("../assets/Payroll/ManualPayroll.png"),
+            require("../assets/Payroll/BIRAlphaList.png"),
+            require("../assets/Payroll/GovernmentDeductions.png"),
+            require("../assets/Payroll/PayPeriod.png"),
+            require("../assets/Payroll/PayStubAmmendments.png"),
+            require("../assets/Payroll/RecurringPayStubAmmendments.png")
           ]
         },
         {
@@ -84,26 +94,44 @@ export default {
           hidden: true,
           tech_stack: ["PHP", "MySQL/MariaDB", "Bootstrap"],
           images: [
-            require("../assets/HMS/Dashboard.jpg"),
-            require("../assets/HMS/Folio.jpg"),
-            require("../assets/HMS/GuestDatabase.jpg")
+            require("../assets/InventorySystem/Home.png"),
+            require("../assets/InventorySystem/ProductInventory.png"),
+            require("../assets/InventorySystem/ProductList.png"),
+            require("../assets/InventorySystem/AddProduct.png"),
+            require("../assets/InventorySystem/BillOfMaterials.png"),
+            require("../assets/InventorySystem/CycleCount.png"),
+            require("../assets/InventorySystem/InventoryReconciliation.png"),
+            require("../assets/InventorySystem/ManageVendor.png"),
+            require("../assets/InventorySystem/MaterialIssuance.png"),
+            require("../assets/InventorySystem/MaterialIssuanceEdit.png"),
+            require("../assets/InventorySystem/ProductCategory.png"),
+            require("../assets/InventorySystem/PurchaseApproval.png"),
+            require("../assets/InventorySystem/PurchaseInvoice.png"),
+            require("../assets/InventorySystem/PurchaseOrder.png"),
+            require("../assets/InventorySystem/PurchaseOrderStatus.png"),
+            require("../assets/InventorySystem/PurchaseRequest.png"),
+            require("../assets/InventorySystem/UnitOfMeasurement.png"),
+            require("../assets/InventorySystem/WarehouseApproval.png"),
+            require("../assets/InventorySystem/WarehouseHome.png")
           ]
         },
         {
-          name: "KTV Admin",
-          description: "Admin dashboard for KTV where user can lock,unlock and restart the KTV player remotely. You can also manage songlist here and apply to KTV players.",
+          name: "Media controller",
+          description: "Admin dashboard for KTV where user can lock,unlock and restart the KTV player remotely. You can also manage song list here and apply to KTV players.",
           hidden: true,
           tech_stack: [
             "PHP",
             "MySQL/MariaDB",
             "Basic4Java",
             "Bootstrap",
+            "JVM",
             "WebSocket"
           ],
           images: [
-            require("../assets/HMS/Dashboard.jpg"),
-            require("../assets/HMS/Folio.jpg"),
-            require("../assets/HMS/GuestDatabase.jpg")
+            require("../assets/MediaController/ArtistsSetup.png"),
+            require("../assets/MediaController/MediaFilesSetup.png"),
+            require("../assets/MediaController/RoomSetup.png"),
+            require("../assets/MediaController/TabletSetup.png")
           ]
         },
         {
@@ -118,9 +146,8 @@ export default {
             "WebSocket"
           ],
           images: [
-            require("../assets/HMS/Dashboard.jpg"),
-            require("../assets/HMS/Folio.jpg"),
-            require("../assets/HMS/GuestDatabase.jpg")
+            require("../assets/KTVPlayer/Default.png"),
+            require("../assets/KTVPlayer/SampleSong.png")
           ]
         },
         {
@@ -140,9 +167,11 @@ export default {
           hidden: true,
           tech_stack: ["Basic4Android", "WebSocket"],
           images: [
-            require("../assets/HMS/Dashboard.jpg"),
-            require("../assets/HMS/Folio.jpg"),
-            require("../assets/HMS/GuestDatabase.jpg")
+            require("../assets/POS/Home.png"),
+            require("../assets/POS/ItemTray.png"),
+            require("../assets/POS/Login.jpg"),
+            require("../assets/POS/MenuCategory.png"),
+            require("../assets/POS/ProductList.png")
           ]
         },
         {

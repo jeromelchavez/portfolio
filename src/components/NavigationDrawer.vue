@@ -17,20 +17,20 @@
           <v-list-item-title>Projects</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
+      <v-list-item link :to="{name:'skills'}">
+        <v-list-item-action>
+          <v-icon>mdi-wrench</v-icon>
+        </v-list-item-action>
+        <v-list-item-content>
+          <v-list-item-title>Skills</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
       <v-list-item link :to="{name:'resume'}">
         <v-list-item-action>
           <v-icon>mdi-book-account</v-icon>
         </v-list-item-action>
         <v-list-item-content>
           <v-list-item-title>Resume</v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
-      <v-list-item link :to="{name:'about'}">
-        <v-list-item-action>
-          <v-icon>mdi-information</v-icon>
-        </v-list-item-action>
-        <v-list-item-content>
-          <v-list-item-title>About</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
     </v-list>
