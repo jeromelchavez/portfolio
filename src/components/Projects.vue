@@ -60,7 +60,7 @@ export default {
         },
         {
           name: "HRIS",
-          description: "Registrar",
+          description: "Software for managing the HR operations of a business, such as hiring and timekeeping. ",
           hidden: true,
           tech_stack: ["PHP", "MySQL/MariaDB", "Bootstrap"],
           images: [
@@ -75,8 +75,8 @@ export default {
           ]
         },
         {
-          name: "Payroll",
-          description: "Registrar",
+          name: "Payroll System",
+          description: "Software for managing employees' salaries and deductions like late and government contributions.",
           hidden: true,
           tech_stack: ["PHP", "MySQL/MariaDB", "Bootstrap"],
           images: [
@@ -163,7 +163,7 @@ export default {
         },
         {
           name: "Point Of Sale",
-          description: "An android app used for controlling the KTV player via WiFi.",
+          description: "Software for managing the customer's order and sales of a business.",
           hidden: true,
           tech_stack: ["Basic4Android", "WebSocket"],
           images: [
@@ -176,7 +176,7 @@ export default {
         },
         {
           name: "Hotel Management System",
-          description: "User interface for cashier/receptionist.",
+          description: "A system for managing guests and hotel rooms.",
           hidden: false,
           tech_stack: [
             "PHP",
